@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>게시물 작성폼</title>
+</head>
+<body>
+<div class="layout">
+    <form action="/board/writedo" method="post">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">이름</label>
+        <input type="text" id="exampleFormControlInput1" name="title" placeholder="이름을 작성하세요.">
+    </div>
+    <br>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">글쓰기</label>
+        <br>
+        <textarea id="exampleFormControlTextarea1" name="content" rows="5">글작성</textarea>
+    </div>
+    <button type="submit">작성하기</button>
+    </form>
+</div>
+</body>
+</html>
