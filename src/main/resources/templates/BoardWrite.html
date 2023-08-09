@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>게시물 작성폼</title>
 </head>
+<style>
+    .layout{
+        width : 500px;
+        margin : 0 auto;
+        margin-top : 40px;
+    }
+</style>
 <body>
 <div class="layout">
-    <form action="/board/writedo" method="post">
+    <form action="/board/writedo" method="post" enctype="multipart/form-data">
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">이름</label>
         <input type="text" id="exampleFormControlInput1" name="title" placeholder="이름을 작성하세요.">
@@ -17,7 +24,8 @@
         <br>
         <textarea id="exampleFormControlTextarea1" name="content" rows="5">글작성</textarea>
     </div>
-    <button type="submit">작성하기</button>
+        <input type="file" name="file">
+        <button type="submit">작성하기</button>
     </form>
 </div>
 </body>
